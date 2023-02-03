@@ -1,0 +1,15 @@
+package com.taskmanager.taskmanager.service;
+
+import com.taskmanager.taskmanager.entity.Task;
+import org.springframework.stereotype.Service;
+
+@Service
+public interface TaskService {
+    Task createTask(String title, boolean isCompleted);
+
+    Task updateTask(Long id, String title, boolean completed);
+
+    Task getTaskById(Long id);
+
+    void deleteTaskById(Long id);
+}
